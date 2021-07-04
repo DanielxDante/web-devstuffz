@@ -1,3 +1,5 @@
+<!-- Characters to avoid in html: "<" should be "&lt;", ">" should be "&gt;"; "&" should be "&amp;" -->
+<!-- browser-sync start --server --directory --files "*" -->
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -5,6 +7,44 @@
     <title>Hello Coursera</title>
   </head>
   <body>
-    <h1>Hello Coursera! It's great!</h1>
+    <!-- Some header information goes here. Usually consists of company logo, some tag line, etc -->
+    <header>
+      -Company Logo-
+      <!-- Soemtimes, navigation is contained in the header as well. Usually links to different parts of the website -->
+      <nav></nav>
+    </header>
+  <!-- Heading 1 is hard not to have -->
+  <h1>Welcome to Dantz!</h1>
+  <h2>This is a site to earn and save money!</h2>
+  <section>
+    Section 1
+    <article class=""></article>
+    <article class=""></article>
+    <article class=""></article>
+    <div class="">Regular DIV element</div>
+  </section>
+  <!-- Some information that relates to the main topic, ie; related posts -->
+  <aside class="">
+
+  </aside>
+  <ul>
+    <li>Company Objective
+      <ol>
+        <!-- &nbsp; is non-breaking space that either wraps the words around it together or not wrap at all -->
+        <li>Provide the best service to &nbsp; our &nbsp; clients</li>
+        <li>&quot; No standard is too high for Dantz &quot;</li>
+        <li>100% transparency with our coders and clientele</li>
+      </ol>
+    </li>
+    <li>Affiliates
+      <ul>
+        <li>Google</li>
+        <li>Apple</li>
+        <li>Palantir</li>
+      </ul>
+    </li>
+    <li>Contact Us</li>
+  </ul>
+  <footer>DAN Copyright 2021</footer>
   </body>
 </html>
