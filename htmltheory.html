@@ -5,14 +5,14 @@
   <head>
     <meta charset="utf-8">
     <title>Hello Coursera</title>
+    <link rel="stylesheet" href="csstheory.css">
 
-    <!-- Inline CSS -->
+    <!-- Styling within HTML -->
     <style>
       /* Element Selector */
       section {
         color: red;
         font-size: 20px;
-        width: 200px;
       }
 
       /* Class Selector */
@@ -27,6 +27,53 @@
       /* IDs are unique and can only be used once in the whole html file */
       #objective {
         color: green;
+      }
+
+      /* Combining Selectors */
+      p.footer {
+        font-size: 15px;
+        width: 100px;
+      }
+
+      /* Child Seclector */
+      /* Every direct child of section named article will have the css rules applied */
+      /* Not limited to elements to elements, could be classes to elements */
+      section > article {
+        color: purple;
+      }
+
+      /* Descendant Selector */
+      /* Every a that is inside section will have the css rules applied, regardless direct or not */
+      /* Not limited to elements to elements, could be classes to elements */
+      section a {
+        font-size: 50px;
+      }
+
+      /* Pseudo Class */
+      /* Most popular ones: link, visited, hover, active, nth-child */
+      ul.Menu {
+        list-style: none;
+      }
+      a:link, a:visited {
+        text-decoration: none;
+        background-color: green;
+        border: 1px solid blue;
+        color: black;
+        display: block;
+        width: 330px;
+        text-align: center;
+        margin-bottom: 1px;
+      }
+      a:hover, a:active {
+        background-color: red;
+        color: purple;
+      }
+      ul.Menu li:nth-child(2) {
+        font-size: 100px;
+      }
+      ul.Menu li:nth-child(3):hover {
+        background color: gray;
+        cursor: pointer;
       }
     </style>
   </head>
@@ -43,10 +90,17 @@
 
   <h2 id="objective">This is a site to earn and save money!</h2>
 
+  <ul class="Menu">
+    <li>Objective</li>
+    <li><a href="https://www.crunchbase.com/organization/dantz-development" title="Content" target="_blank">Content</a></li>
+    <li>CEO Message</li>
+    <li>Contact Us</li>
+  </ul>
+
   <section>
     Section A
-    <article class=""></article>
-    <article class=""></article>
+    <article class="">Hi</article>
+    <article class=""><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="Rick Roll" target="_blank">Press here for surprises...</a></article>
     <article class=""></article>
     <div class="">Regular DIV element</div>
   </section>
@@ -306,8 +360,9 @@
     and joint efforts—of common dangers, sufferings, and successes.
   </section>
 
-  <p><a href="#top">Back to Top</a></p>
+  <p class="footer"><a href="#top">Back to Top</a></p>
 
-  <footer>DAN Copyright 2021</footer>
+  <!-- Inline CSS -->
+  <footer style="text-align: center;">DAN Copyright 2021</footer>
   </body>
 </html>
