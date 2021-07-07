@@ -8,19 +8,27 @@
 
     <!-- Inline CSS -->
     <style>
+      /* Element Selector */
       section {
         color: red;
         font-size: 20px;
         width: 200px;
       }
 
-      h1 {
+      /* Class Selector */
+      /* Grouping Selectors */
+      ul, .blue {
         color: blue;
         font-size: 36px;
         text-align: center;
       }
-    </style>
 
+      /* ID Selector */
+      /* IDs are unique and can only be used once in the whole html file */
+      #objective {
+        color: green;
+      }
+    </style>
   </head>
 
   <body>
@@ -31,9 +39,9 @@
       <nav></nav>
     </header>
   <!-- Heading 1 is hard not to have -->
-  <h1>Welcome to Dantz!</h1>
+  <h1 class="blue">Welcome to Dantz!</h1>
 
-  <h2>This is a site to earn and save money!</h2>
+  <h2 id="objective">This is a site to earn and save money!</h2>
 
   <section>
     Section A
