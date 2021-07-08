@@ -1,3 +1,26 @@
+/* CSS Rules */
+/* When there's no confilict, Last Declaration Wins and Declarations Merge */
+/* Inheritance: When applying a CSS rule to a parent, all children will have the CSS rule applied too */
+/* When there is conflict, Most Specific Selector Combination Wins
+      From most specific to least specific:
+            - Inline CSS [style = ""]
+            - ID
+            - Class, Pseudo-class, Attribute
+            - Number of elements [Child Selector & Descendant Selector]
+*/
+
+/* Adding !important will override all specificity rules */
 header {
+  text-align: center !important;
+}
+
+.Section1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #346751;
+  font-style: italic;
+  font-weight: bold;
+  /* font-size has 3 different unit of measurements: px (Absolute style), % (Relative. overriding style) and em (Relative, overriding style) */
+  font-size: 10px;
+  text-transform: capitalize;
   text-align: center;
 }
