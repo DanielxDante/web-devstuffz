@@ -24,3 +24,43 @@ header {
   text-transform: capitalize;
   text-align: center;
 }
+
+/* Star element is not inheriting */
+/* Star element is used to reset the default browser stylesheet aka user agent stylesheet */
+* {
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+body {
+  background-color: gray;
+  background-image: url("background1.jpg");
+  background-repeat: repeat-y;
+  background-position: right;
+  /* background: gray url("background1.jpg") repeat-y right; */
+}
+
+/* Padding Sequence: Top, Right, Bottom, Left */
+/* To avoid sizing problems, always use vorder-box as default */
+/* The box-sizing style is by nature not inherited, so you cannot put it in the parent element
+A solution to this is to use the Star element, which applies the styles to every element */
+/* Cumulative Margins:
+When two boxes are places side by side, the left or right margins are independant;
+When two boxes are placed on top of each other, the margin between them collapses, and the bigger margin is the eventual one */
+#box {
+  background-color: blue;
+  padding: 5px 5px 5px 5px;
+  border: 3px solid black;
+  text-align: center;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  width: 850px;
+}
+
+#content {
+  background-color: #90EE90;
+}
+
+#greeting {
+  margin-top: 40px;
+}
