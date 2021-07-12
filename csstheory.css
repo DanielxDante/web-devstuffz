@@ -41,7 +41,7 @@ body {
 }
 
 /* Padding Sequence: Top, Right, Bottom, Left */
-/* To avoid sizing problems, always use vorder-box as default */
+/* To avoid sizing problems, always use border-box as default */
 /* The box-sizing style is by nature not inherited, so you cannot put it in the parent element
 A solution to this is to use the Star element, which applies the styles to every element */
 /* Cumulative Margins:
@@ -63,4 +63,59 @@ When two boxes are placed on top of each other, the margin between them collapse
 
 #greeting {
   margin-top: 40px;
+}
+
+/* Floating Elements (Positioning Scheme) */
+/* float removes the element from the document flow and pushes the other elements up according to their margins */
+/* The floated element still respects the margins */
+/* clear is resuming the document flow */
+/* Used to make 2-column pages */
+div.affiliates {
+  /* background-color: #00FFFF; */
+}
+
+div.affiliates p {
+  width: 50%;
+  height: 50px;
+  /* border: 1px solid black; */
+  padding: 5px;
+  float: left
+}
+
+div.affiliates section {
+  clear: left;
+}
+
+#a1 {
+  /* background-color: #A52A2A; */
+}
+
+#a2 {
+  /* background-color: #DEB887; */
+}
+
+#a3 {
+  /* background-color: #5F9EA0; */
+}
+
+#a4 {
+  /* background-color: #FF7F50; */
+}
+
+/* Relative Positioning */
+/* The original space where the element was does not change and elements around it also does not change */
+/* Directions stated in position: relative can be understood by "from" the top, bottom, left, right. To not be confused, use negative values to actually move it in the direction stated */
+/* By default, html is the only element that has relative positioning set on it */
+h1 {
+  position: relative;
+  right: -820px;
+}
+
+/* Absoulte Positioning */
+/* The element is taken out of document flow and elements around it will move assuming the space that the original element was in is now empty */
+/* If an absolute element is within a relative element, if the relative element is offset, the absolute element will move along with it */
+/* The relative element in this case, also known as the container, needs to have positioning styled, or else it will keep going up the ancestry till it reaches html */
+p.footer {
+  position: absolute;
+  top: 2460px;
 }
