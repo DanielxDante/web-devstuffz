@@ -119,3 +119,46 @@ p.footer {
   position: absolute;
   top: 2460px;
 }
+
+/* Media Queries */
+/* Comma is equivalent to "OR" in media queries */
+#Section2 {
+  text-align: center;
+  background-color: #A52A2A;
+  width: 1880px;
+  height: 300px;
+}
+
+#Section3 {
+  text-align: center;
+  background-color: #DEB887;
+  width: 1880px;
+  height: 300px;
+}
+
+/* Large Devices only */
+@media (min-width: 1200px) {
+  #Section2 {
+    width: 80%;
+  }
+  #Section3 {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Medium Devices only */
+@media (min-width: 992px) and (max-width: 1199px) {
+  #Section2 {
+    width: 50%;
+  }
+  #Section3 {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* With Media Queries, you can solve the problem of website differences between different devices */
+/* Responsive Design is introduced, which encapsulates every aspect of how desktop and mobile websites can interact the same way */
+/* Most common Responsive Layout is 12-columns as it has a lot of common factors so it is very flexible */
+/* Example shown in ResponsiveDesignExample.html */
