@@ -44,6 +44,14 @@
   }
 }
 
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
 body {
   margin: 0;
   font-family: var(--bs-font-sans-serif);
