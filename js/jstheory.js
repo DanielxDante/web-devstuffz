@@ -5,6 +5,7 @@
 // You can even run functions within inputs (Eg: Running console.log() within inputs)
 // You can define fucntions as functions because var can be functions too
 // JS has 7 built-in var types: 6 primitive and 1 object
+// Functions are Objects in JS
 // Always put curly brace on the same line as the function declaration!!! (No arguments)
 
 var x = "Hello World!";
@@ -21,6 +22,12 @@ var a = function () {
 function compare(x, y) {
   return x > y;
 } ;
+
+// Even though function only takes 2 arguments, it is legal to put 3 or more when calling it
+function add(x, y) {
+  return x + y;
+} ;
+console.log(add(1,2,3));
 
 // Scope Chain
 // "this" is a global variable
@@ -136,5 +143,87 @@ var facebook = {
   },
   "stock of company": 110,
 };
+console.log(facebook);
 
-console.log(facebook)
+function multiply(x, y) {
+  return x * y;
+} ;
+console.log(multiply(5,3));
+multiply.version = "v.1.0.0";
+console.log(multiply);
+
+function makeMultiplier(multiplier) {
+  var myFunc = function (x) {
+    return multiplier * x;
+  };
+  return myFunc
+};
+var multiplyBy3 = makeMultiplier(3);
+console.log(multiplyBy3(10));
+
+function doOperationOn(x, operation) {
+  return operation(x);
+};
+var result = doOperationOn(5, multiplyBy3);
+console.log(result);
+
+// Primitives copy by value while objects copy by reference
+// (Primitives are allocated one memory space for each variable that copied it but objects are given one memory space that links to another for each attribute, so when it gets copied, a memory space with the new variable name is created but links to the same atrribute memory space)
+var a = 7;
+var b = a;
+console.log(a);
+console.log(b);
+b = 5
+console.log(a);
+console.log(b);
+
+var a = {x: 7};
+var b = a;
+console.log(a);
+console.log(b);
+b.x = 5;
+console.log(a);
+console.log(b);
+
+function test() {
+  console.log(this);
+  this.myName = "Daniel";
+};
+test();
+
+// Function constructor - Classes
+// Circle is similar to the parent class
+function Circle (radius) {
+  this.radius = radius;
+  // This creates the function getArea everytime we create a new instance of Circle, wich we do not want
+  // this.getArea = function () {
+  //   return Math.PI * Math.pow(this.radius, 2);
+  // };
+};
+// So we use prototype, similar to methods in classes
+Circle.prototype.getArea = function () {
+  return Math.PI * Math.pow(this.radius, 2);
+};
+// myCircle creates an instance of Circle
+var myCircle = new Circle(10);
+console.log(myCircle)
+console.log(myCircle.getArea());
+var myOtherCircle = new Circle(20);
+console.log(myOtherCircle)
+console.log(myOtherCircle.getArea());
+
+// "this" acts as self
+var literalCircle = { //  equivalent to new Object()
+  radius: 10,
+  getArea: function () {
+    var self = this;
+    console.log(this);
+    var increaseRadius = function() {
+      self.radius = 20; // When "this" is used within a function within a function, "this" points to the global "this", so we use "self"
+    };
+    increaseRadius();
+    console.log(this.radius)
+    return Math.PI * Math.pow(this.radius, 2);
+  },
+};
+console.log(literalCircle.getArea());
