@@ -144,6 +144,9 @@ var facebook = {
   "stock of company": 110,
 };
 console.log(facebook);
+for (var prop in facebook) {
+  console.log(prop + ": " + facebook[prop]);
+}
 
 function multiply(x, y) {
   return x * y;
@@ -152,6 +155,7 @@ console.log(multiply(5,3));
 multiply.version = "v.1.0.0";
 console.log(multiply);
 
+//Closures
 function makeMultiplier(multiplier) {
   var myFunc = function (x) {
     return multiplier * x;
@@ -227,3 +231,45 @@ var literalCircle = { //  equivalent to new Object()
   },
 };
 console.log(literalCircle.getArea());
+
+// Arrays are objects too
+// Array creation Way 1
+var array = new Array();
+array[0] = "Daniel";
+array[1] = 2;
+array[2] = function(name) {
+  console.log("hello " + name);
+}
+array[3] = {course: "HTML, CSS & JS"};
+console.log(array);
+console.log(array[1]);
+array[2](array[0]);
+console.log(array[3].course);
+
+// Array creation Way 2
+var names = ["Daniel", "Tay", "Jin", "Hong"];
+console.log(names);
+names[100] = "Joe";
+// This is one of the legit ways to loop an Array
+// The way of traversing the array using (for name in names) cannot work because it will traverse the properties of names as well
+for (var i = 0; i < names.length; i++) {
+  console.log("Hello " + names[i]);
+}
+
+// Immediate Invoke Function Expression(IIFE)
+(function () {
+  console.log("Hello Coursera");
+})();
+// IIFE exposing inner function within window
+(function (window)
+  {
+    var danielGreeter = {};
+    danielGreeter.name = "Daniel";
+    var greeting = "Hello";
+    danielGreeter.sayHello = function () {
+      console.log(greeting + danielGreeter.name);
+    };
+    window.danielGreeter = danielGreeter;
+  }
+)(window);
+danielGreeter.sayHello();
