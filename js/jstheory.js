@@ -273,3 +273,60 @@ for (var i = 0; i < names.length; i++) {
   }
 )(window);
 danielGreeter.sayHello();
+
+// DOM (Document Object Model) Manipulation
+console.log(document.getElementById("name"));
+// Function getElementById is part of HTMLDocument so you dont need to create it
+// HTMLDocument is an example of an Application Programming Interface (API) used within applications outside of source code, sort of like a console in games
+console.log(document instanceof HTMLDocument);
+// Behaviour Binding from HTML - Using onclick in HTML
+// The argument "event" is added to every Event Handler
+function sayHi(event) {
+  console.log(event);
+  this.textContent = "Done!";
+  var name = document.getElementById("name").value
+  var message = "<h2> Hi " + name + "! </h2>"
+  // document.getElementById("content").textContent = message;
+  document.getElementById("content").innerHTML = message;
+
+  if (name==="student") {
+    // querySelector is more general than getElementById
+    var title = document.querySelector("#title").textContent;
+    title += " --- Student Mode";
+    document.querySelector("#title").textContent = title;
+  };
+};
+
+// Behaviour Binding in JS Way 1
+document.querySelector("button").addEventListener("click",sayHi);
+document.querySelector("body").addEventListener("mousemove",
+    function (event) {
+      if (event.shiftKey == true) {
+        console.log("x: " + event.clientX);
+        console.log("y: " + event.clientY);
+      }
+    }
+  );
+
+// Behaviour Binding in JS Way 2
+// document.querySelector("button").onclick = sayHi;
+
+// Event Handling
+// You can nest Behaviours into an Event for when the page is loaded, the Behaviours are loaded, before content is loaded
+document.addEventListener("DOMContentLoaded",
+  function (event) {
+    // function sayHi(event) {
+    //   this.textContent = "Done!";
+    //   var name = document.getElementById("name").value
+    //   var message = "<h2> Hi " + name + "! </h2>"
+    //   document.getElementById("content").innerHTML = message;
+    //   if (name==="student") {
+    //     var title = document.querySelector("#title").textContent;
+    //     title += " --- Student Mode";
+    //     document.querySelector("#title").textContent = title;
+    //   };
+    // };
+    // document.querySelector("button").addEventListener("click",sayHi);
+    console.log("FIN");
+  }
+);

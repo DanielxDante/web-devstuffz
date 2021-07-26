@@ -6,8 +6,7 @@
     <meta charset="utf-8">
     <title>Web Dev Course</title>
     <link rel="stylesheet" href="../css/csstheory.css">
-    <script src="../js/jstheory.js"></script>
-    
+
     <!-- JS within HTML
     <script>
       console.log(x);
@@ -94,9 +93,19 @@
       <nav></nav>
     </header>
   <!-- Heading 1 is hard not to have -->
-  <h1 class="blue">Welcome to Dantz!</h1>
+  <h1 class="blue" id="title">Welcome to Dantz!</h1>
 
   <h2 id="objective">This is a site to earn and save money!</h2>
+
+  <p>
+    Input your name:
+    <input type="text" id="name">
+    <button name="button">
+      Confirm
+    </button>
+  </p>
+
+  <div id="content"></div>
 
   <ul class="Menu">
     <li>Objective</li>
@@ -388,5 +397,7 @@
 
   <!-- Inline CSS -->
   <footer style="text-align: center;">DAN Copyright 2021</footer>
+
+  <script src="../js/jstheory.js"></script>
   </body>
 </html>
