@@ -1,3 +1,5 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css";
+
 *{
   box-sizing: border-box;
 }
@@ -9,32 +11,32 @@ body {
   font-family: "Oxygen", sans-serif;
 }
 
-/* ------------------------------HEADER------------------------------------- */
-#header-nav {
-  background-color: #f6b319;
-  border-radius: 0;
-  border: 0;
-  height: 170px;
-}
-
-.container {
-  margin: 0;
-}
-
-#logo-img {
-  background: url("restaurant-logo.png") no-repeat;
-  width: 150px;
-  height: 150px;
-  margin: 0px;
-  /* float: left; */
+/* Navbar */
+.navbar-light {
+  background: #f6b319;
+  height: 200px;
 }
 
 .navbar-brand {
-  padding-top: 25px;
+  width: 185px;
+  height: 185px;
+  padding-top: 15px;
   padding-left: 25px;
+  margin: 0px;
+  float: left;
 }
 
-.navbar-brand h1 {
+.brand {
+  height: 130px;
+  width: 435px;
+  padding-left: 15px;
+}
+
+.brand-name {
+  text-decoration: none;
+}
+
+.brand-name h1 {
   font-family: "Lora", serif;
   color: #557c3e;
   font-size: 1.75em;
@@ -44,20 +46,10 @@ body {
   line-height: .75;
 }
 
-.navbar-brand a {
-  text-decoration: none;
-}
 
-.navbar-brand p {
+.kosher-name {
   color: #000;
   text-transform: uppercase;
   font-size: .7em;
-}
-
-.navbar-brand p span {
   vertical-align: middle;
-}
-
-.navbar-toggler-icon {
-  background-color: black;
 }
