@@ -14,7 +14,7 @@ body {
 /* Navbar */
 .navbar-light {
   background: #f6b319;
-  height: 200px;
+  height: 170px;
 }
 
 .navbar-brand {
@@ -30,6 +30,7 @@ body {
   height: 130px;
   width: 435px;
   padding-left: 15px;
+  padding-top: 15px;
 }
 
 .brand-name {
@@ -46,10 +47,49 @@ body {
   line-height: .75;
 }
 
+.kosher {
+  text-align: left;
+}
 
 .kosher-name {
   color: #000;
   text-transform: uppercase;
   font-size: .7em;
   vertical-align: middle;
+}
+
+.navbox {
+  padding-top: 0px;
+}
+
+.nav-item {
+  font-family: "Lora", serif;
+  font-size: 1.5rem;
+  padding: 0 0.5rem 0 2.5rem;
+  text-align: center;
+}
+
+.fas {
+  vertical-align: middle;
+}
+
+.contact {
+  padding-top: 10px;
+}
+
+.contactno {
+  color: #61122f;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.slogan {
+  color: #557c3e;
+  font-size: 0.9em;
+  text-align: right;
+}
+
+.img-fluid {
+  height:120%;
+  width: 100%;
 }
