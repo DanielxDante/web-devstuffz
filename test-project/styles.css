@@ -89,7 +89,103 @@ body {
   text-align: right;
 }
 
+.jumbotron {
+  padding-top: 10px;
+}
+
 .img-fluid {
   height:120%;
   width: 100%;
+}
+
+.tiles {
+  position: relative;
+  height: 100px;
+}
+
+.menu-tile {
+  background-image: url("menu-tile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  float: left;
+  border-radius: 15px;
+  height: 250px;
+  width: 30%;
+  margin: 15px;
+  position: relative;
+  border: 2px solid #3F0C1F;
+  overflow: hidden;
+}
+
+.specials-tile {
+  background-image: url("specials-tile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  float: left;
+  border-radius: 15px;
+  height: 250px;
+  width: 30%;
+  margin: 15px;
+  position: relative;
+  border: 2px solid #3F0C1F;
+  overflow: hidden;
+}
+
+.map-tile {
+  float: left;
+  border-radius: 15px;
+  height: 250px;
+  width: 34%;
+  margin: 15px;
+  position: relative;
+  border: 2px solid #3F0C1F;
+  overflow: hidden;
+}
+
+.menu-tile span, .specials-tile span, .map-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-family: "Lora", serif;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .8;
+}
+
+footer {
+  position:absolute;
+  margin-top: 30px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  background-color: #222;
+  border-top: 0;
+}
+
+
+.hours {
+  float: left;
+  border-radius: 15px;
+  height: 250px;
+  width: 30%;
+  margin: 15px;
+}
+
+.address {
+  float: left;
+  border-radius: 15px;
+  height: 250px;
+  width: 30%;
+  margin: 15px;
+}
+
+.testimonials {
+  float: left;
+  border-radius: 15px;
+  height: 250px;
+  width: 30%;
+  margin: 15px;
 }
