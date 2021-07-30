@@ -67,6 +67,7 @@ body {
   font-size: 1.5rem;
   padding: 0 0.5rem 0 2.5rem;
   text-align: center;
+  line-height: 1.5;
 }
 
 .fas {
@@ -99,8 +100,8 @@ body {
 }
 
 .tiles {
-  position: relative;
-  height: 100px;
+  overflow: auto;
+  height: 100%;
 }
 
 .menu-tile {
@@ -109,9 +110,10 @@ body {
   background-size: cover;
   float: left;
   border-radius: 15px;
-  height: 250px;
-  width: 30%;
-  margin: 15px;
+  height: 325px;
+  width: 100%;
+  margin: 15px 30px 15px 15px;
+  padding: 0px;
   position: relative;
   border: 2px solid #3F0C1F;
   overflow: hidden;
@@ -123,9 +125,10 @@ body {
   background-size: cover;
   float: left;
   border-radius: 15px;
-  height: 250px;
-  width: 30%;
-  margin: 15px;
+  height: 325px;
+  width: 100%;
+  margin: 15px 30px 15px 30px;
+  padding: 0px;
   position: relative;
   border: 2px solid #3F0C1F;
   overflow: hidden;
@@ -134,9 +137,10 @@ body {
 .map-tile {
   float: left;
   border-radius: 15px;
-  height: 250px;
-  width: 34%;
-  margin: 15px;
+  height: 325px;
+  width: 100%;
+  margin: 15px 15px 15px 30px;
+  padding: 0px;
   position: relative;
   border: 2px solid #3F0C1F;
   overflow: hidden;
@@ -158,34 +162,69 @@ body {
 
 footer {
   position:absolute;
-  margin-top: 30px;
-  padding-top: 35px;
+  margin-top: 15px;
+  padding-top: 15px;
   padding-bottom: 30px;
   background-color: #222;
   border-top: 0;
 }
 
-
 .hours {
   float: left;
   border-radius: 15px;
   height: 250px;
-  width: 30%;
+  width: 100%;
   margin: 15px;
+  font-size: 15px;
+  line-height: 200%;
 }
 
-.address {
-  float: left;
-  border-radius: 15px;
-  height: 250px;
-  width: 30%;
-  margin: 15px;
+.hours h3 {
+  font-family: "Lora", serif;
+  font-size: 1.3em;
 }
 
 .testimonials {
   float: left;
   border-radius: 15px;
   height: 250px;
-  width: 30%;
+  width: 100%;
   margin: 15px;
+  font-size: 15px;
+  line-height: 200%;
+}
+
+.testimonials h3 {
+  font-family: "Lora", serif;
+  font-size: 1.3em;
+}
+
+.testimonials p {
+  font-style: italic;
+}
+
+.address {
+  float: left;
+  border-radius: 15px;
+  height: 250px;
+  width: 100%;
+  margin: 15px;
+  font-size: 15px;
+  line-height: 200%;
+}
+
+.address h3 {
+  font-family: "Lora", serif;
+  font-size: 1.3em;
+}
+
+.address p{
+  padding-top: 15px;
+  color: #557c3e;
+  line-height: 1.8;
+}
+
+.copyright {
+  font-style: italic;
+  padding-top: 15px;
 }
